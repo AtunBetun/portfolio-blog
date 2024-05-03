@@ -1,5 +1,5 @@
 # Portfolio Blog
 
 TODO:
-* deploy app          []
-* create project plan []
+* [ ] deploy app
+* [ ] create project plan
