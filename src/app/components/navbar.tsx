@@ -1,4 +1,3 @@
-// https://github.com/leerob/leerob.io/-/blob/app/components/nav.tsx
 import Link from 'next/link';
 
 
