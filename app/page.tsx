@@ -25,11 +25,11 @@ export default function Page() {
 				hi i'm alberto 👋
 			</h1>
 			<p className="prose prose-neutral dark:prose-invert">
-				i am a software engineer working at blackstone
+				i am a software engineer working at blackstone.
 			</p>
 			<br />
 			<p className="prose prose-neutral dark:prose-invert">
-				{"at night i am a bodybuilder training to compete in men's physique at "}
+				{"at night, i am a bodybuilder training to compete in men's physique at "}
 				<Link href="https://ocbonline.com"> OCB</Link>
 				{", a drug tested bodybuilding federation."}
 			</p>
@@ -44,11 +44,11 @@ export default function Page() {
 			>
 			</Image>
 			<p className="prose prose-neutral dark:prose-invert">
-				my main passion is discovering new ways to challenge myself and dive deep into topics
+				my main passion is discovering new ways to challenge myself and dive deep into topics.
 			</p>
 			<br />
 			<p className="prose prose-neutral dark:prose-invert">
-				creating this portofolio + blog is an example of this passion. i had an itch of not knowing how to develop and deploy frontend applications. so i decided to scratch it
+				creating this portfolio and blog is an example of this passion. i did not know how to develop and deploy frontend applications, so i dove into it.
 			</p>
 			<ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
 				<li>
