@@ -1,3 +1,6 @@
+import Image from "next/image";
+import monkey from "public/images/monkey.jpg"
+
 function ArrowIcon() {
 	return (
 		<svg
@@ -28,6 +31,15 @@ export default function Page() {
 				at night i am a bodybuilder training to compete in men's physique at the ocb, drug tested, bodybuilding federation.
 			</p>
 			<br />
+			<Image
+				alt="me with a nice monkey"
+				src={monkey}
+				width={300}
+				height={100}
+				priority
+				className="rounded-lg object-cover"
+			>
+			</Image>
 			<p>
 				my main passion is discovering new ways to challenge myself and dive deep into topics
 			</p>
