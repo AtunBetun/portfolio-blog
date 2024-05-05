@@ -45,9 +45,3 @@ export default function BlogPage() {
 		</section>
 	);
 }
-
-async function Views({ slug }: { slug: string }) {
-	let views = await getViewsCount();
-
-	return <ViewCounter allViews={views} slug={slug} />;
-}

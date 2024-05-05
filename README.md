@@ -1,6 +1,6 @@
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fleerob%2Fleerob.io)
 
-# leerob.io
+# Alberto DSM Blog + Portofolio
 
 - **Framework**: [Next.js](https://nextjs.org/)
 - **Database**: [Postgres](https://vercel.com/postgres)
@@ -8,6 +8,14 @@
 - **Deployment**: [Vercel](https://vercel.com)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com)
 - **Analytics**: [Vercel Analytics](https://vercel.com/analytics)
+
+## Upcoming Features
+[ ] work router
+[ ] work resume
+[ ] blog router
+[ ] blog 1: the setup (neovim)
+[ ] blog view count
+[ ] blog as markdown
 
 ## Running Locally
 

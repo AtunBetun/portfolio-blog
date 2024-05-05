@@ -1,6 +1,5 @@
 import Image from "next/image";
 import monkey from "public/images/monkey.jpg"
-import Badge from "./components/badge";
 import Link from "next/link";
 
 function ArrowIcon() {
