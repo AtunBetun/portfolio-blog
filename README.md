@@ -1,65 +1,37 @@
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fleerob%2Fleerob.io)
+# The basic framework of the portfolio is setup
 
-# Alberto DSM Blog + Portofolio
+## things to check out later
 
-- **Framework**: [Next.js](https://nextjs.org/)
-- **Database**: [Postgres](https://vercel.com/postgres)
-- **Authentication**: [NextAuth.js](https://next-auth.js.org)
-- **Deployment**: [Vercel](https://vercel.com)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com)
-- **Analytics**: [Vercel Analytics](https://vercel.com/analytics)
+[ ] contentful using graphql instead of the traditional approach
+[ ] Framer motion and other animation styles
+[x] add projects
+[ ] Loading states for the modal with image - refernece [this video](https://twitter.com/asidorenko_/status/1688633177403789314)
+[ ] fancier modal with gallery?
 
-## Upcoming Features
-[ ] work router
-[ ] work resume
-[ ] blog router
-[ ] blog 1: the setup (neovim)
-[ ] blog view count
-[ ] blog as markdown
+## OG card generation
 
-## Running Locally
+https://og-playground.vercel.app/
 
-This application requires Node.js v18.17+.
+```
+<div
+  style={{
+    height: '100%',
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#000',
+    fontSize: 32,
+    fontWeight: 600,
+  }}
+>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" width="95">
+  <path d="M6 3a3 3 0 00-3 3v1.5a.75.75 0 001.5 0V6A1.5 1.5 0 016 4.5h1.5a.75.75 0 000-1.5H6zM16.5 3a.75.75 0 000 1.5H18A1.5 1.5 0 0119.5 6v1.5a.75.75 0 001.5 0V6a3 3 0 00-3-3h-1.5zM12 8.25a3.75 3.75 0 100 7.5 3.75 3.75 0 000-7.5zM4.5 16.5a.75.75 0 00-1.5 0V18a3 3 0 003 3h1.5a.75.75 0 000-1.5H6A1.5 1.5 0 014.5 18v-1.5zM21 16.5a.75.75 0 00-1.5 0V18a1.5 1.5 0 01-1.5 1.5h-1.5a.75.75 0 000 1.5H18a3 3 0 003-3v-1.5z" />
+</svg>
 
-```bash
-git clone https://github.com/leerob/leerob.io.git
-cd leerob.io
-bun install
-bun run setup # Remove all of my personal information
-bun dev
+  <div style={{ marginTop: 40, color : '#fff' }}>Thy Umwelt | Photography</div>
+</div>
 ```
 
-Create a `.env.local` file similar to [`.env.example`](https://github.com/leerob/leerob.io/blob/main/.env.example).
-
-## Database Schema
-
-```sql
-CREATE TABLE redirects (
-  id SERIAL PRIMARY KEY,
-  source VARCHAR(255) NOT NULL,
-  destination VARCHAR(255) NOT NULL,
-  permanent BOOLEAN NOT NULL
-);
-
-CREATE TABLE guestbook (
-  id SERIAL PRIMARY KEY,
-  email VARCHAR(255) NOT NULL,
-  body TEXT NOT NULL,
-  created_by VARCHAR(255) NOT NULL,
-  created_at TIMESTAMP NOT NULL,
-  updated_at TIMESTAMP
-);
-
-CREATE TABLE views (
-  slug VARCHAR(255) PRIMARY KEY,
-  count INT NOT NULL
-);
-```
-
-## License
-
-1. You are free to use this code as inspiration.
-2. Please do not copy it directly.
-3. Crediting the author is appreciated.
-
-Please remove all of my personal information (blog posts, images, etc.) by running `bun run setup`.
+[ ]
