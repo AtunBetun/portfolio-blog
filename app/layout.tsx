@@ -1,71 +1,43 @@
-import './global.css';
-import type { Metadata } from 'next';
-import { GeistSans } from 'geist/font/sans';
-import { GeistMono } from 'geist/font/mono';
-import { Navbar } from './components/nav';
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/next';
+import "./globals.css";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import type { ReactNode, FC } from "react";
+import Menu from "@/components/ui/menu";
+import { Particles } from "@/components/particles";
+import { Providers } from "@/lib/providers";
+import GoogleAnalytics from "./GoogleAnalytics";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	metadataBase: new URL('https://leerob.io'),
-	title: {
-		default: 'Alberto De Saint Malo',
-		template: '%s | Alberto De Saint Malo',
-	},
-	description: 'Developer, writer, and creator.',
-	openGraph: {
-		title: 'Alberto De Saint Malo',
-		description: 'Developer, writer, and creator.',
-		url: 'https://leerob.io',
-		siteName: 'Alberto De Saint Malo',
-		locale: 'en_US',
-		type: 'website',
-	},
-	robots: {
-		index: true,
-		follow: true,
-		googleBot: {
-			index: true,
-			follow: true,
-			'max-video-preview': -1,
-			'max-image-preview': 'large',
-			'max-snippet': -1,
-		},
-	},
-	twitter: {
-		title: 'Alberto De Saint Malo',
-		card: 'summary_large_image',
-	},
-	verification: {
-		google: 'eZSdmzAXlLkKhNJzfgwDqWORghxnJ8qR9_CHdAh5-xw',
-		yandex: '14d2e73487fa6c71',
-	},
+    title: {
+        template: "Alberto De Saint Malo",
+        default: "Portfolio",
+    },
+    description: "A website by Alberto De Saint Malo",
 };
 
-const cx = (...classes) => classes.filter(Boolean).join(' ');
-
-export default function RootLayout({
-	children,
-}: {
-	children: React.ReactNode;
-}) {
-	return (
-		<html
-			lang="en"
-			className={cx(
-				'text-black bg-white dark:text-white dark:bg-[#111010]',
-				GeistSans.variable,
-				GeistMono.variable
-			)}
-		>
-			<body className="antialiased max-w-2xl mb-40 flex flex-col md:flex-row mx-4 mt-8 lg:mx-auto">
-				<main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
-					<Navbar />
-					{children}
-					<Analytics />
-					<SpeedInsights />
-				</main>
-			</body>
-		</html>
-	);
+interface RootLayoutProps {
+    children: ReactNode;
+    modal: ReactNode;
 }
+const RootLayout: FC<RootLayoutProps> = ({ children, modal }) => {
+    return (
+        <html lang="en" suppressHydrationWarning>
+            <body className={inter.className}>
+                <Providers>
+                    <Menu />
+                    <Particles className="absolute inset-0 -z-10" />
+                    {children}
+                    <h2 className="text-center bottom-3 text-xs md:text-normal left-0 opacity-60 right-0 m-auto w-5/6 md:w-1/2  scroll-m-20 p-5 pt-10 text-md  tracking-tight transition-colors first:mt-0">
+                        Alberto De Saint Malo
+                    </h2>
+                </Providers>
+                <GoogleAnalytics />
+            </body>
+            {/* {modal} */}
+        </html>
+    );
+};
+
+export default RootLayout;
